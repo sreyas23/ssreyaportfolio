@@ -1,0 +1,163 @@
+.contact-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 4%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 5%;
+}
+
+.contact-info {
+  margin-top: -2%;
+  width: 40%;
+  text-align: left;
+  padding: 3%;
+}
+
+#contact h2 {
+  font-size: 44px;
+  color: #EAE7DC;
+  text-align: center;
+}
+
+.contact-info {
+  justify-content: space-around;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  color: #EAE7DC;
+  font-size: 18px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  color: #EAE7DC;
+  margin-bottom: 20px;
+}
+
+.location p {
+  margin-left: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #E64833;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007BFF;
+}
+
+.cp {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #EAE7DC;
+  padding: 3%;
+  border-radius: 5px;
+}
+
+.cp h2 {
+  padding-bottom: 6%;
+  text-align: center;
+  font-size: 44px;
+  color: #EAE7DC;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  color: #E64833;
+}
+
+form label {
+  font-size: 18px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+form input, form textarea {
+  padding: 15px;
+  border: none;
+  background-color: #222222;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #EAE7DC;
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+}
+
+button {
+  padding: 8px;
+  background-color: #E64833;
+  border: none;
+  color: white;
+  width: 24%;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  align-items: center;
+}
+
+.butt {
+  text-align: center;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #EAE7DC;
+  color: #E64833;
+}
+
+.location img {
+  width: 18px;
+  height: 18px;
+  margin-right: 3px;
+}
+
+.lin img {
+  width: 34px;
+  height: 34px;
+}
+
+.gb img {
+  width: 36px;
+  height: 36px;
+}
+
+.mail img {
+  width: 42px;
+  height: 42px;
+}
+
+.social-icons {
+  align-items: center;
+}
+
+.loc p {
+  padding-top: 16px;
+}
+
+footer {
+  text-align: center;
+  color: #777777;
+  font-size: 12px;
+  margin-top: 8px;
+  padding-bottom: 8px;
+}
+
+hr {
+  border: 0.1px solid #EAE7DC;
+}

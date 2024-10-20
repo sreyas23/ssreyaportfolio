@@ -1,0 +1,78 @@
+.Nav-bar {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #000000, #111111, #000000);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+  color: #E64833;
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
+  padding-left: 1.25%;
+}
+
+.dot {
+  color: #FFFFFF;
+}
+
+.nav-menu {
+  list-style-type: none;
+  display: flex;
+  gap: 40px;
+  z-index: 1;
+  color: #EBE9E1;
+  padding: 20px 40px;
+  width: auto;
+  height: 20px;
+}
+
+.nav-menu li {
+  font-size: 18px;
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.nav-menu li:hover {
+  cursor: pointer;
+  color: #E64833;
+}
+
+.nav-connect {
+  font-size: 18px;
+  z-index: 1;
+  padding-right: 4%;
+}
+
+.nav-connect-button {
+  padding: 15px;
+  background: #E64833;
+  font-size: 18px;
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  z-index: 1;
+}
+
+.nav-connect-button:hover {
+  background-color: #FFFFFF;
+  color: #E64833;
+  cursor: pointer;
+  padding: 14px;
+  border: 1px solid #E64833;
+}
+
+.nav-menu li.active {
+  color: #E64833;
+  font-weight: bold;
+  text-decoration: underline;
+}

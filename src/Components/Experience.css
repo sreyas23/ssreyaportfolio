@@ -1,0 +1,112 @@
+#experience {
+  padding-bottom: 5%;
+}
+
+.experience-header {
+  text-align: center;
+  font-size: 44px;
+  margin-bottom: 4%;
+}
+
+
+.company-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 7.5%;
+  width: 85%;
+  margin-bottom: 3%;
+  z-index: 1;
+  border-radius: 5px;
+  background-color: #111111;
+  box-shadow: 0 1px 5px rgba(255, 255, 255, 0.3);
+}
+
+.company-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.company-logo {
+  padding-left: 2%;
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+
+}
+
+.job-title {
+  font-size: 24px;
+  color: #E64833;
+  padding-left: 2%;
+}
+
+.tech-stack {
+padding: 2%;
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.tech-elogo {
+  width: 24px;
+  height: 24px;
+}
+
+.company-details {
+  padding-bottom: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.points-container {
+    padding-left: 2%;
+    padding-right: 1%;
+}
+
+.points {
+  list-style-type: disc;
+     text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #EAE7DC;
+}
+
+.points li {
+  margin-top: 2%;
+  text-align: justify;
+}
+
+.view-more-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2%;
+  width: 100%
+}
+
+
+.view-more-button {
+
+  background-color: #E64833;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #EAE7DC;
+  font-size: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-more-button:hover {
+  opacity: 0.9;
+}
+
+
+.view-more-button.clicked {
+  background-color: #EAE7DC;
+  color: #E64833;
+}
+

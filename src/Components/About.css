@@ -1,0 +1,119 @@
+.About-page {
+    padding-top: 5%;
+    padding-bottom: 6%;
+}
+
+.hola {
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+.about-me-h1 {
+    display: flex;
+    justify-content: space-around;
+    font-family: "montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    padding-bottom: 4%;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-me-p {
+    margin-left: 7%;
+    width: 65%;
+    height: auto;
+    z-index: 1;
+    border-radius: 5px;
+    background-color: #111111;
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.3);
+    margin-right: 5%;
+}
+
+.about-me-p p {
+    margin-top: 1px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 13px;
+    font-family: "montserrat", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0.4%;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.education {
+    display: flex;
+    margin-left: -2%;
+    flex-direction: column;
+    gap: 18px;
+    margin-right: 6%;
+}
+
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    z-index: 1;
+    border-radius: 5px;
+    background-color: #111111;
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.2);
+}
+
+.education-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.education-item h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #E64833;
+    font-size: 24px;
+}
+
+.education-item p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.education-item img {
+    margin-left: 2%;
+    margin-top: 5.5%;
+    width: 100px;
+    height: 100px;
+    margin-right: 5%;
+    border-radius: 5px;
+    border: 1px #444444 solid;
+    transition: background-color 0.3s ease;
+}
+
+.education-item img:hover {
+    border: 1px #444444 solid;
+    transform: scale(1.1);
+}
+
+.exp h2 {
+    padding-top: 1%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.paragraph-text {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: #FFFFFF;
+}
