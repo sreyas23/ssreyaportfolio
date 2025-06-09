@@ -1,119 +1,157 @@
-.About-page {
-    padding-top: 5%;
-    padding-bottom: 6%;
+#about {
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
-.hola {
-    margin-left: 3%;
-    margin-top: 3%;
+.About-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 70px;
 }
 
 .about-me-h1 {
-    display: flex;
-    justify-content: space-around;
-    font-family: "montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 44px;
-    padding-bottom: 4%;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  padding-bottom: 50px;
 }
 
-.about-content {
-    display: flex;
-    flex-direction: row;
+.about-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 90%;
+  align-items: flex-start;
+}
+
+.left-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .about-me-p {
-    margin-left: 7%;
-    width: 65%;
-    height: auto;
-    z-index: 1;
-    border-radius: 5px;
-    background-color: #111111;
-    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.3);
-    margin-right: 5%;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #111111;
+  box-shadow: 0 0px 10px #00ccffbd;
 }
 
 .about-me-p p {
-    margin-top: 1px;
-    margin-left: 4px;
-    margin-right: 4px;
-    padding: 13px;
-    font-family: "montserrat", sans-serif;
-    font-weight: 200;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 0.4%;
-    text-align: justify;
-    line-height: 1.5;
-}
-
-.education {
-    display: flex;
-    margin-left: -2%;
-    flex-direction: column;
-    gap: 18px;
-    margin-right: 6%;
+  padding-top: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  text-align: justify;
 }
 
 .education-item {
-    display: flex;
-    align-items: flex-start;
-    padding: 15px;
-    z-index: 1;
-    border-radius: 5px;
-    background-color: #111111;
-    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #111111;
+  box-shadow: 0 1px 8px #00ccffbd;
 }
 
 .education-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
 }
 
 .education-item h2 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    color: #E64833;
-    font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #009dffaa;
+  font-size: 24px;
 }
 
 .education-item p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 200;
-    font-size: 16px;
-    margin: 0;
-    margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  margin-top: 15px;
 }
 
-.education-item img {
-    margin-left: 2%;
-    margin-top: 5.5%;
-    width: 100px;
-    height: 100px;
-    margin-right: 5%;
-    border-radius: 5px;
-    border: 1px #444444 solid;
-    transition: background-color 0.3s ease;
+.school-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
 }
 
-.education-item img:hover {
-    border: 1px #444444 solid;
-    transform: scale(1.1);
+.school-title img {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
 }
 
 .exp h2 {
-    padding-top: 1%;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    margin-top: 5%;
-    text-align: center;
+  padding-top: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-align: center;
 }
 
-.paragraph-text {
+/* Animations */
+.slide-in-left {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 1s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-me-h1 {
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+
+  .about-me-p p,
+  .education-item p {
     font-size: 14px;
-    line-height: 1.5;
-    margin-top: 10px;
-    color: #FFFFFF;
+  }
+
+  .education-item h2 {
+    font-size: 20px;
+  }
+
+  .exp h2 {
+    font-size: 20px;
+  }
 }

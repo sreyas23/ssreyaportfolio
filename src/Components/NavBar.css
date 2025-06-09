@@ -1,78 +1,128 @@
+/* General Navbar Styles */
 .Nav-bar {
   display: flex;
-  justify-content: right;
+  justify-content: space-between; /* Logo left, menu right */
   align-items: center;
   padding: 10px 20px;
-  background: linear-gradient(to right, #000000, #111111, #000000);
+  background: #000000;
   position: fixed;
   width: 100%;
   z-index: 2;
+
 }
 
+/* Logo styling */
 .logo {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
-  color: #E64833;
   font-family: "montserrat", sans-serif;
-  font-weight: 700;
-  padding-left: 1.25%;
+  padding-left: 1%;
 }
 
-.dot {
-  color: #FFFFFF;
+.logo .symbol {
+  color: #EAE7DC;
+   color: #009dffaa; /* Color for </> */
 }
 
+.logo .text {
+  color: #009dffaa;
+  color: #EAE7DC;/* Color for vk */
+}
+
+/* Navigation Menu for Desktop */
 .nav-menu {
   list-style-type: none;
   display: flex;
   gap: 40px;
-  z-index: 1;
-  color: #EBE9E1;
+  margin: 0;
   padding: 20px 40px;
-  width: auto;
-  height: 20px;
+
 }
 
 .nav-menu li {
   font-size: 18px;
   font-family: "montserrat", sans-serif;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .nav-menu li:hover {
-  cursor: pointer;
-  color: #E64833;
-}
-
-.nav-connect {
-  font-size: 18px;
-  z-index: 1;
-  padding-right: 4%;
-}
-
-.nav-connect-button {
-  padding: 15px;
-  background: #E64833;
-  font-size: 18px;
-  font-family: "montserrat", sans-serif;
-  font-weight: 500;
-  color: #FFFFFF;
-  width: 100%;
-  border-radius: 5px;
-  border: none;
-  z-index: 1;
-}
-
-.nav-connect-button:hover {
-  background-color: #FFFFFF;
-  color: #E64833;
-  cursor: pointer;
-  padding: 14px;
-  border: 1px solid #E64833;
+  color: #009dffaa;
 }
 
 .nav-menu li.active {
-  color: #E64833;
+  color: #009dffaa;
   font-weight: bold;
-  text-decoration: underline;
+}
+
+/* Hamburger menu icon (hidden by default) */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 37px;
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.hamburger-icon {
+  width: 30px; /* Adjust the size as needed */
+  height: auto;
+}
+
+/* Responsive Styles for Mobile (below 1000px) */
+@media (max-width: 1000px) {
+  /* Show the hamburger icon */
+  .menu-icon {
+    display: flex;
+  }
+
+  .Nav-bar {
+    padding-top: 20px;
+  }
+
+  /* Hide the desktop nav menu by default */
+  .nav-menu {
+    position: absolute;
+    top: 49px; /* Adjust based on your navbar height */
+    right:60px;
+    background: #111111;
+    flex-direction: column;
+    width: 140px;
+    padding: 20px;
+    gap: 20px;
+    text-align: center;
+    display: none;
+  }
+
+  /* When the hamburger is clicked, show the menu */
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    font-size: 16px;
+  }
+
+  .logo {
+    font-size: 28px;
+    padding-left: 10px;
+  }
+
+}
+/* Additional adjustments for even smaller devices */
+@media (max-width: 500px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav-menu li {
+    font-size: 14px;
+  }
 }

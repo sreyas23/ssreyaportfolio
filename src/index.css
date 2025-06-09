@@ -6,7 +6,7 @@
 
 body{
     height: 100vh;
-    background: linear-gradient(to right, #000000, #111111, #000000);
+    background-color: #000000;
 
     font-family: "montserrat", sans-serif;
     color: #EAE7DC;

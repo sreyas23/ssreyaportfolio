@@ -6,16 +6,17 @@ import Skills from "./components/skills.jsx";
 import Experience from "./components/Experience.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
-
+import CertificationsGrid from "./components/certifications.jsx";
 const App = () => {
     return (
         <div>
             <Navbar/>
             <Home/>
-            <About/>
+           <About/>
             <Skills/>
             <Experience/>
             <Projects/>
+            <CertificationsGrid/>
             <Contact/>
         </div>
 

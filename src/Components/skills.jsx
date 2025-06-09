@@ -1,199 +1,137 @@
-import React from 'react';
-import './Skills.css';
+import React, { useEffect } from "react";
+import "./skills.css";
 
-import htmlLogo from '../assets/html.svg';
-import cssLogo from '../assets/css.svg';
-import reactLogo from '../assets/react.svg';
-import nodeLogo from '../assets/nodejs.svg';
-import expressLogo from '../assets/express.png';
-import springBootLogo from '../assets/spring.svg';
-import figmaLogo from '../assets/figma.svg';
-import mysqlLogo from '../assets/mysql.svg';
-import mongodbLogo from '../assets/mongodb.svg';
-import postgresqlLogo from '../assets/postgresql.svg';
-import dockerLogo from '../assets/docker.svg';
-import kubernetesLogo from '../assets/kubernetes.svg';
-import gitLogo from '../assets/git.svg';
-import jenkinsLogo from '../assets/jenkins.svg';
-import awsLogo from '../assets/aws.svg';
-import hadoopLogo from '../assets/hadoop.svg';
+// Data & ML Logos
+import pythonLogo from "../assets/python.svg";
+import rLogo from "../assets/r.svg";
+import sqlServerLogo from "../assets/sqlserver.svg";
+import mysqlLogo from "../assets/mysql.svg";
+import postgresqlLogo from "../assets/postgresql.svg";
+import mongodbLogo from "../assets/mongodb.svg";
+import numpyLogo from "../assets/numpy.svg";
+import pandasLogo from "../assets/pandas.svg";
+import matplotlibLogo from "../assets/matplotlib.svg";
+import scipyLogo from "../assets/Scipy-.svg";
+import scikitLogo from "../assets/scikit.png";
+import tensorflowLogo from "../assets/tensorflow.svg";
+import pytorchLogo from "../assets/pytorch.svg";
+import opencvLogo from "../assets/opencv.svg";
+import pysparkLogo from "../assets/pyspark.jpg";
+import hadoopLogo from "../assets/hadoop.svg";
+import excelLogo from "../assets/excel.svg";
+import gitLogo from "../assets/git.svg";
 
-import numpyLogo from '../assets/numpy.svg';
-import pandasLogo from '../assets/pandas.svg';
-import matplotlibLogo from '../assets/matplotlib.svg';
-import tensorflowLogo from '../assets/tensorflow.svg';
-import pytorchLogo from '../assets/pytorch.svg';
-import scikitLearnLogo from '../assets/scikit.png';
-import opencvLogo from '../assets/opencv.svg';
-import pysparkLogo from '../assets/pyspark.jpg';
+// Application & BI Logos
+import htmlLogo from "../assets/html.svg";
+import cssLogo from "../assets/css.svg";
+import reactLogo from "../assets/react.svg";
+import nodeLogo from "../assets/nodejs.svg";
+import figmaLogo from "../assets/figma.svg";
+import tableauLogo from "../assets/tableau.svg";
+import powerbiLogo from "../assets/powerbi.svg";
+import awsLogo from "../assets/aws.svg";
+import s3Logo from "../assets/amazons3.svg";
+import redshiftLogo from "../assets/redshift.svg";
+import glueLogo from "../assets/glue.svg";
+import athenaLogo from "../assets/athena.svg";
+import dynamodbLogo from "../assets/dynamodb.svg";
+import snowflakeLogo from "../assets/snowflake.svg";
+import sparkLogo from "../assets/apache_spark.svg";
+import ssisLogo from "../assets/ssis.svg";
+import informaticaLogo from "../assets/informatica.svg";
+import jiraLogo from "../assets/jira.svg";
+import servicenowLogo from "../assets/servicenow.svg";
+import alteryxLogo from "../assets/alteryx.svg";
+import vscodeLogo from "../assets/visual-studio-code.svg";
 
-import pythonLogo from '../assets/python.svg';
-import javaLogo from '../assets/java.svg';
-import javascriptLogo from '../assets/javascript.svg';
-import cLogo from '../assets/c.png';
+const appDevelopmentLogos = [
+  htmlLogo,
+  cssLogo,
+  reactLogo,
+  nodeLogo,
+  figmaLogo,
+  tableauLogo,
+  powerbiLogo,
+  awsLogo,
+  s3Logo,
+  redshiftLogo,
+  glueLogo,
+  athenaLogo,
+  dynamodbLogo,
+  snowflakeLogo,
+  sparkLogo,
+  ssisLogo,
+  informaticaLogo,
+  jiraLogo,
+  servicenowLogo,
+  alteryxLogo,
+  vscodeLogo,
+  gitLogo,
+];
 
-const Skills = () => {
+const progMLLogos = [
+  pythonLogo,
+  rLogo,
+  sqlServerLogo,
+  mysqlLogo,
+  postgresqlLogo,
+  mongodbLogo,
+  numpyLogo,
+  pandasLogo,
+  matplotlibLogo,
+  scipyLogo,
+  scikitLogo,
+  tensorflowLogo,
+  pytorchLogo,
+  opencvLogo,
+  pysparkLogo,
+  hadoopLogo,
+  excelLogo,
+];
+
+const InfiniteScroll = () => {
+  useEffect(() => {
+    const scrollers = document.querySelectorAll(".scroller");
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      scrollers.forEach((scroller) => {
+        scroller.setAttribute("data-animated", "true");
+        const inner = scroller.querySelector(".scroller__inner");
+        Array.from(inner.children).forEach((item) => {
+          const clone = item.cloneNode(true);
+          clone.setAttribute("aria-hidden", "true");
+          inner.appendChild(clone);
+        });
+      });
+    }
+  }, []);
+
   return (
-
     <section id="skills">
-       <h1 className="skills-header">My Skills</h1>
-    <div className = "skills-page">
+      <h1 className="tech_skills">Technical Skills</h1>
 
-    <div className='first-half'>
+      <div className="scroller" data-speed="slow" data-direction="left">
+        <p className="skills-category">Application Development & BI</p>
+        <ul className="tag-list scroller__inner">
+          {appDevelopmentLogos.map((logo, i) => (
+            <li key={i} className="tech-item">
+              <img src={logo} alt={`App logo ${i}`} className="tech-logo" />
+            </li>
+          ))}
+        </ul>
+      </div>
 
-        <div className="development">
-        <p className='development-p'>Development</p>
-          <div className="row">
-            <div className="tech-item">
-              <img src={htmlLogo} alt="HTML" className="tech-logo" />
-              <p>HTML</p>
-            </div>
-            <div className="tech-item">
-              <img src={cssLogo} alt="CSS" className="tech-logo" />
-              <p>CSS</p>
-            </div>
-            <div className="tech-item">
-              <img src={reactLogo} alt="React" className="tech-logo" />
-              <p>React</p>
-            </div>
-            <div className="tech-item">
-              <img src={nodeLogo} alt="Node.js" className="tech-logo" />
-              <p>Node.js</p>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="tech-item">
-              <img src={expressLogo} alt="Express.js" className="tech-logo" />
-              <p>Express.js</p>
-            </div>
-            <div className="tech-item">
-              <img src={springBootLogo} alt="Spring Boot" className="tech-logo" />
-              <p>Spring Boot</p>
-            </div>
-            <div className="tech-item">
-              <img src={figmaLogo} alt="Figma" className="tech-logo" />
-              <p>Figma</p>
-            </div>
-            <div className="tech-item">
-              <img src={mysqlLogo} alt="MySQL" className="tech-logo" />
-              <p>MySQL</p>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="tech-item">
-              <img src={mongodbLogo} alt="MongoDB" className="tech-logo" />
-              <p>MongoDB</p>
-            </div>
-            <div className="tech-item">
-              <img src={postgresqlLogo} alt="PostgreSQL" className="tech-logo" />
-              <p>PostgreSQL</p>
-            </div>
-            <div className="tech-item">
-              <img src={dockerLogo} alt="Docker" className="tech-logo" />
-              <p>Docker</p>
-            </div>
-            <div className="tech-item">
-              <img src={kubernetesLogo} alt="Kubernetes" className="tech-logo" />
-              <p>Kubernetes</p>
-            </div>
-          </div>
-
-          <div className="row">
-            <div className="tech-item">
-              <img src={gitLogo} alt="Git" className="tech-logo" />
-              <p>Git</p>
-            </div>
-            <div className="tech-item">
-              <img src={jenkinsLogo} alt="Jenkins" className="tech-logo" />
-              <p>Jenkins</p>
-            </div>
-          <div className="tech-item">
-                  <img src={hadoopLogo} alt="hadoop" className="tech-logo" />
-                  <p>Hadoop</p>
-                </div>
-            <div className="tech-item">
-              <img src={awsLogo} alt="Aws" className="tech-logo" />
-              <p>AWS</p>
-            </div>
-
-          </div>
-        </div>
-
-        </div>
-
-        <div className= 'second-half'>
-        <div className="machine-learning">
-        <p className='development-p'>Machine Learning</p>
-              <div className="row">
-                <div className="tech-item">
-                  <img src={numpyLogo} alt="NumPy" className="tech-logo" />
-                  <p>NumPy</p>
-                </div>
-                <div className="tech-item">
-                  <img src={pandasLogo} alt="Pandas" className="tech-logo" />
-                  <p>Pandas</p>
-                </div>
-                <div className="tech-item">
-                  <img src={matplotlibLogo} alt="Matplotlib" className="tech-logo" />
-                  <p>Matplotlib</p>
-                </div>
-                <div className="tech-item">
-                  <img src={pysparkLogo} alt="PySpark" className="tech-logo" />
-                  <p>PySpark</p>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="tech-item">
-                  <img src={opencvLogo} alt="OpenCV" className="tech-logo" />
-                  <p>OpenCV</p>
-                </div>
-                <div className="tech-item">
-                  <img src={tensorflowLogo} alt="TensorFlow" className="tech-logo" />
-                  <p>TensorFlow</p>
-                </div>
-                <div className="tech-item">
-                  <img src={pytorchLogo} alt="PyTorch" className="tech-logo" />
-                  <p>PyTorch</p>
-                </div>
-
-                <div className="tech-item">
-                  <img src={scikitLearnLogo} alt="Scikit-learn" className="tech-logo" />
-                  <p>Scikit-learn</p>
-                </div>
-              </div>
-
-            </div>
-
-            <div className="languages">
-            <p className='development-p'>Programming Languages</p>
-            <div className="row">
-              <div className="tech-item">
-                <img src={pythonLogo} alt="Python" className="tech-logo" />
-                <p>Python</p>
-              </div>
-              <div className="tech-item">
-                <img src={javaLogo} alt="Java" className="tech-logo" />
-                <p>Java</p>
-              </div>
-              <div className="tech-item">
-                <img src={javascriptLogo} alt="JavaScript" className="tech-logo" />
-                <p>JavaScript</p>
-              </div>
-              <div className="tech-item">
-                <img src={cLogo} alt="C" className="tech-logo" />
-                <p>C</p>
-              </div>
-            </div>
-            </div>
-
-          </div>
-
-    </div>
+      <div className="scroller" data-speed="slow" data-direction="left">
+        <p className="skills-category">Programming & Machine Learning</p>
+        <ul className="tag-list scroller__inner">
+          {progMLLogos.map((logo, i) => (
+            <li key={i} className="tech-item">
+              <img src={logo} alt={`ML logo ${i}`} className="tech-logo" />
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };
 
-export default Skills;
+export default InfiniteScroll;
